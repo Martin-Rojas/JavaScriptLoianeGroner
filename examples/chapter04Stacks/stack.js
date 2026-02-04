@@ -33,5 +33,9 @@ export class Stack {
    size() {
       return this.count;
    }
-   clear() {}
+   clear() {
+      this.top = null;
+      this.count = 0;
+   }
+   // ADD toString method
 }
