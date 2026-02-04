@@ -1,4 +1,31 @@
-import { Stack } from "./stack-array.js";
+//import { Stack } from "./stack-array.js";
+import { Stack } from "./stack.js";
+// const stack = new Stack();
+
+// console.log(stack.isEmpty());
+
+// stack.push(5);
+// stack.push(8);
+
+// console.log(stack.peek());
+// stack.push(11);
+
+// console.log(stack.size());
+// console.log(stack.isEmpty());
+
+// stack.push(15);
+// stack.pop();
+// stack.pop();
+
+// console.log(stack.size());
+
 const stack = new Stack();
 
-console.log(stack.isEmpty());
+stack.push(18);
+stack.push(25);
+stack.push(30);
+console.log(stack);
+
+console.log(`node removed ==> ${stack.pop().value}`);
+
+console.log(stack);
