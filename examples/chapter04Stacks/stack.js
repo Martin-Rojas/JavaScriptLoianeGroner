@@ -21,11 +21,17 @@ export class Stack {
          let removeNode = this.top;
          this.top = this.top.next;
          this.count--;
-         return removeNode;
+         return removeNode.value;
       }
    }
-   peek() {}
-   isEmpty() {}
-   size() {}
+   peek() {
+      return this.top.value;
+   }
+   isEmpty() {
+      return this.count === 0 ? false : true;
+   }
+   size() {
+      return this.count;
+   }
    clear() {}
 }

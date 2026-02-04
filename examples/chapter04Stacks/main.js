@@ -21,11 +21,17 @@ import { Stack } from "./stack.js";
 
 const stack = new Stack();
 
+console.log(`the Stack is empty::: ${stack.isEmpty()}`);
 stack.push(18);
 stack.push(25);
 stack.push(30);
+console.log(stack.peek());
+console.log(stack.size());
 console.log(stack);
 
-console.log(`node removed ==> ${stack.pop().value}`);
+console.log(`node removed ==> ${stack.pop()}`);
 
+console.log("After the first pop " + stack.peek());
+console.log("After the first pop " + stack.size());
 console.log(stack);
+console.log(`the Stack is empty::: ${stack.isEmpty()}`);
