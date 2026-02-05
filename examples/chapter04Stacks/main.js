@@ -35,3 +35,9 @@ console.log("After the first pop " + stack.peek());
 console.log("After the first pop " + stack.size());
 console.log(stack);
 console.log(`the Stack is empty::: ${stack.isEmpty()}`);
+
+console.log(stack.toString());
+stack.push(30);
+stack.push(19);
+stack.push(98);
+console.log(stack.toString());

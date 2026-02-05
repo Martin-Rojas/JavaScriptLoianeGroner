@@ -38,4 +38,15 @@ export class Stack {
       this.count = 0;
    }
    // ADD toString method
+   toString() {
+      let string = ``;
+      let currentNode = this.top;
+
+      while (currentNode) {
+         string += `${currentNode.value} =>`;
+         currentNode = currentNode.next;
+      }
+
+      return string + ` Null`;
+   }
 }
