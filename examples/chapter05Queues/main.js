@@ -13,6 +13,13 @@ console.log(queue);
 queue.enqueue(35);
 console.log(queue);
 
+queue.enqueue(345);
+console.log(queue);
+
 console.log(`this is the front value ==> ${queue.peek().value}`);
 
 console.log("size of queue =>" + queue.size());
+
+console.log(queue.dequeue());
+console.log(queue.size());
+console.log(queue.peek());
