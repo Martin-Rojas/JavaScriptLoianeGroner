@@ -7,7 +7,17 @@ class Queue {
       this.rear = null;
    }
    // Insert item from the back
-   enqueue(item) {}
+   enqueue(value) {
+      const newNode = new Node(value);
+      if (this.front === null && this.rear === null) {
+         this.front = newNode;
+         this.rear = newNode;
+      } else {
+         this.rear.next = newNode;
+         this.rear = newNode;
+      }
+      this.count++;
+   }
    // Remove item from the front
    dequeue() {}
    // get the front item
@@ -17,3 +27,5 @@ class Queue {
    // Get the size of the Queue
    size() {}
 }
+
+export { Queue };
