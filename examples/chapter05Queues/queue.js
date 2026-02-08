@@ -21,11 +21,17 @@ class Queue {
    // Remove item from the front
    dequeue() {}
    // get the front item
-   peek() {}
+   peek() {
+      return this.front;
+   }
    // Check if the queue it has items
-   isEmpty() {}
+   isEmpty() {
+      return this.front === null;
+   }
    // Get the size of the Queue
-   size() {}
+   size() {
+      return this.count;
+   }
 }
 
 export { Queue };
