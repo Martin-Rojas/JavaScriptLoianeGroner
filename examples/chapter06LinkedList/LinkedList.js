@@ -24,11 +24,28 @@ class LinkedList {
       this.count++;
    }
    /* Inserts a new element at a specified position in the list*/
-   insert(element, position) {}
+   insert(element, position) {
+      // Check if the position is in range of list
+      if (position >= 0 && position < this.count) {
+         return `Inrange`;
+      } else {
+         return `out-of-bounds`;
+      }
+   }
 
    /* Return the size of the list*/
    size() {
       return this.count;
+   }
+
+   toString() {
+      let currentNode = this.head;
+      let listString = ``;
+      while (currentNode) {
+         listString += ` ${currentNode.value} ==>`;
+         currentNode = currentNode.next;
+      }
+      return listString + " null";
    }
 }
 
