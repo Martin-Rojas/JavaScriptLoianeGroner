@@ -13,3 +13,5 @@ console.log("After the third node ");
 
 list.push(38);
 console.log(list);
+
+console.log(`Size of the list ==> ${list.size()}`);

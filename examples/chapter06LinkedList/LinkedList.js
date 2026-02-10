@@ -21,6 +21,14 @@ class LinkedList {
          currentNode.next = newNode;
          console.log(currentNode);
       }
+      this.count++;
+   }
+   /* Inserts a new element at a specified position in the list*/
+   insert(element, position) {}
+
+   /* Return the size of the list*/
+   size() {
+      return this.count;
    }
 }
 
