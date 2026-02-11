@@ -16,10 +16,17 @@ console.log(list);
 
 console.log(`Size of the list ==> ${list.size()}`);
 
-console.log(list.insert(45, 4));
-console.log(list.insert(45, 0));
-console.log(list.insert(45, 1));
-console.log(list.insert(45, 3));
-console.log(list.insert(45, 2));
+// console.log(list.insert(45, 2));
+// console.log(list.insert(45, 0));
+// console.log(list.insert(45, 1));
+// console.log(list.insert(45, 3));
+// console.log(list.insert(45, 2));
+//console.log(list.insert(89, 5));
+console.log(list.toString());
 
+console.log(list.insert(89, 3));
+console.log(list.insert(3, 4));
+console.log(list.insert(31, 5));
+
+console.log(`after the insertions`);
 console.log(list.toString());

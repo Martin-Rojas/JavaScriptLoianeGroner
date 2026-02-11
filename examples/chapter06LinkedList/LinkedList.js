@@ -25,12 +25,31 @@ class LinkedList {
    }
    /* Inserts a new element at a specified position in the list*/
    insert(element, position) {
-      // Check if the position is in range of list
-      if (position >= 0 && position < this.count) {
-         return `Inrange`;
-      } else {
-         return `out-of-bounds`;
+      // Checks for bounds of the position
+      if (position < 0 || position > this.count) {
+         return "out-of-bounds";
       }
+      const newNode = new Node(element);
+
+      //Insert at head
+      if (position === 0) {
+         newNode.next = this.head;
+         this.head = newNode;
+      } else {
+         let previous = this.head;
+         let current = this.head;
+
+         // Move to correct position
+         for (let i = 0; i < position; i++) {
+            previous = current;
+            current = current.next;
+         }
+
+         previous.next = newNode;
+         newNode.next = current;
+      }
+      this.count++;
+      return true;
    }
 
    /* Return the size of the list*/
