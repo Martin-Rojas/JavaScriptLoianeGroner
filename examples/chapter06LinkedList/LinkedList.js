@@ -51,6 +51,21 @@ class LinkedList {
       this.count++;
       return true;
    }
+   /* Return the element of a specific position in the list
+       if the element does not exist in the list, it return undefined*/
+   getElementAt(index) {
+      // Check if the index is in-bound of the linked list
+      if (index < 0 || index > this.count) {
+         return undefined;
+      }
+      let currentNode = this.head;
+      // Get the element from the list
+      for (let i = 0; i < index; i++) {
+         currentNode = currentNode.next;
+      }
+
+      return currentNode;
+   }
 
    /* Return the size of the list*/
    size() {

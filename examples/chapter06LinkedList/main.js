@@ -30,3 +30,9 @@ console.log(list.insert(31, 5));
 
 console.log(`after the insertions`);
 console.log(list.toString());
+
+console.log(list.getElementAt(2));
+console.log(list.getElementAt(8));
+console.log(list.getElementAt(0));
+console.log(list.getElementAt(4));
+console.log(list.getElementAt(5));
