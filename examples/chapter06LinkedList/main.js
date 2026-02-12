@@ -36,3 +36,11 @@ console.log(list.getElementAt(8));
 console.log(list.getElementAt(0));
 console.log(list.getElementAt(4));
 console.log(list.getElementAt(5));
+
+console.log(`Test remove method`);
+console.log(list.remove(18));
+console.log(list.remove(38));
+console.log(list.remove(3));
+console.log(list.remove(31));
+console.log(list.remove(380));
+console.log(list.toString());

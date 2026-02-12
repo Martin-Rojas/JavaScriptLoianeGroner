@@ -67,6 +67,38 @@ class LinkedList {
       return currentNode;
    }
 
+   /* Removes an element from the list*/
+   remove(element) {
+      if (this.size() === 0) return false;
+
+      // If head matches
+      if (element === this.head.value) {
+         this.head = this.head.next;
+         this.count--;
+         return true;
+      }
+      let previousNode = this.head;
+      let currentNode = previousNode.next;
+
+      while (currentNode !== null) {
+         if (currentNode.value === element) {
+            previousNode.next = currentNode.next;
+            this.count--;
+            return true;
+         }
+         previousNode = currentNode;
+         currentNode = currentNode.next;
+      }
+      return false;
+   }
+
+   /* Returns the index of the element in the list. If element 
+       does not exist return -1*/
+   indexOf(element) {}
+
+   /* Removes an item from a specified position in the list*/
+   removeAt(position) {}
+
    /* Return the size of the list*/
    size() {
       return this.count;
