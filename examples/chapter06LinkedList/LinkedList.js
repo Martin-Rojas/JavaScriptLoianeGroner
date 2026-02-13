@@ -113,7 +113,35 @@ class LinkedList {
    }
 
    /* Removes an item from a specified position in the list*/
-   removeAt(position) {}
+   removeAt(position) {
+      // Checks for bounds of the position
+      if (position < 0 || position >= this.count) {
+         return false;
+      }
+
+      let previousNode = null;
+      let currentNode = this.head;
+      let index = 1;
+
+      if (position === 0) {
+         this.head = currentNode.next;
+         this.count--;
+         return true;
+      }
+
+      while (currentNode !== null) {
+         if (index === position) {
+            previousNode.next = currentNode.next;
+            this.count--;
+            return true;
+         }
+         previousNode = currentNode;
+         currentNode = currentNode.next;
+         index++;
+      }
+      // If the element is not found
+      return false;
+   }
 
    /* Return the size of the list*/
    size() {
