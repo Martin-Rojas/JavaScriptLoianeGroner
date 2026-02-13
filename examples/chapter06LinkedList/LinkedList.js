@@ -94,7 +94,23 @@ class LinkedList {
 
    /* Returns the index of the element in the list. If element 
        does not exist return -1*/
-   indexOf(element) {}
+   indexOf(element) {
+      // Check empty list
+      if (this.size() === 0) return -1;
+
+      let currentNode = this.head;
+      let index = 0;
+
+      // Traverse the list and return the index
+      while (currentNode !== null) {
+         if (currentNode.value === element) {
+            return index;
+         }
+         index++;
+         currentNode = currentNode.next;
+      }
+      return -1;
+   }
 
    /* Removes an item from a specified position in the list*/
    removeAt(position) {}

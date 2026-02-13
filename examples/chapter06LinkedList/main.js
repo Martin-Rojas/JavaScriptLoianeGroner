@@ -44,3 +44,12 @@ console.log(list.remove(3));
 console.log(list.remove(31));
 console.log(list.remove(380));
 console.log(list.toString());
+
+console.log(`Test indexOf method`);
+list.push(98);
+list.push(18);
+list.push(77);
+list.push(7);
+console.log(list.indexOf(25));
+console.log(list.indexOf(77));
+console.log(list.toString());
