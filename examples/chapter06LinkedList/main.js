@@ -56,3 +56,8 @@ import { DoublyLinkedList } from "./DoublyLinkedList.js";
 // console.log(list.toString());
 const doublyList = new DoublyLinkedList();
 console.log(doublyList);
+
+doublyList.push(18);
+doublyList.push(25);
+doublyList.push(31);
+console.log(doublyList);

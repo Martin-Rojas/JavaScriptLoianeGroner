@@ -1,4 +1,5 @@
 import { LinkedList } from "./LinkedList.js";
+import DoublyNode from "./DoublyNode.js";
 
 class DoublyLinkedList extends LinkedList {
    constructor() {
@@ -7,7 +8,18 @@ class DoublyLinkedList extends LinkedList {
    }
 
    /* Insert a new element at the end (tail) of the list.*/
-   push(element) {}
+   push(element) {
+      const newNode = new DoublyNode(element);
+      if (this.count === null) {
+         this.head = newNode;
+         this.tail = newNode;
+      } else {
+         this.tail.next = newNode;
+         newNode.prev = this.tail;
+         this.tail = newNode;
+      }
+      this.count++;
+   }
    /* Insert a new element at a specific index.*/
    insert(element, position) {}
    /* Remove a node at a specific index.*/
