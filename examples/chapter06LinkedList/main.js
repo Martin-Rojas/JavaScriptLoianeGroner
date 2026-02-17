@@ -60,4 +60,9 @@ console.log(doublyList);
 doublyList.push(18);
 doublyList.push(25);
 doublyList.push(31);
-console.log(doublyList);
+console.log(doublyList.toString());
+
+console.log(doublyList.insert(77, 2));
+console.log(doublyList.insert(100, 0));
+console.log(doublyList.insert(88, 3));
+console.log(doublyList.toString());
